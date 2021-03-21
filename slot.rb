@@ -1,15 +1,21 @@
+def line
+  puts "---------------------"
+end
+def random
+  rand(10)
+end
 coin = 100
 point = 0
 use_coin = 0
 get_coin = 0
 get_point = 0
 while coin > 0 do
-  puts "---------------------"
+  line
   puts "コイン：#{coin}"
   puts "ポイント：#{point}"
   puts "なんまいコインをいれますか？"
   puts "（0でやめる)"
-  puts "---------------------"
+  line
   use_coin = gets.to_i
   if use_coin == 0 then
     puts
@@ -23,39 +29,40 @@ while coin > 0 do
     puts
     break
   end
-  puts "---------------------"
+  line
   puts use_coin
   puts "ボタン(エンター)を３かい おしましょう！"
   puts
-  puts "---------------------"
+  line
   gets
-  a1 = rand(10)
-  a2 = rand(10)
-  a3 = rand(10)
-  b1 = rand(10)
-  b2 = rand(10)
-  b3 = rand(10)
-  c1 = rand(10)
-  c2 = rand(10)
-  c3 = rand(10)
-  puts "--------------------"
+  a1 = random
+  a2 = random
+  a3 = random
+  b1 = random
+  b2 = random
+  b3 = random
+  c1 = random
+  c2 = random
+  c3 = random
+  line
   puts "|#{a1}|||"
   puts "|#{a2}|||"
   puts "|#{a3}|||"
-  puts "--------------------"
+  line
   gets
-  puts "--------------------"
+  line
   puts "|#{a1}|#{b1}||"
   puts "|#{a2}|#{b2}||"
   puts "|#{a3}|#{b3}||"
-  puts "--------------------"
+  line
   gets
-  puts "--------------------"
+  line
   puts "|#{a1}|#{b1}|#{c1}|"
   puts "|#{a2}|#{b2}|#{c2}|"
   puts "|#{a3}|#{b3}|#{c3}|"
-  puts "--------------------"
-  if a1 == b1 and a1 == c1 or a2 == b2 and a2 == c2 or a3 == b3 and a3 == c3 or a1 == b2 and a1 == c3 or c1 == b2 and c1 == a3
+  line
+  if (a1 == b1 and a1 == c1) or (a2 == b2 and a2 == c2) or
+  (a3 == b3 and a3 == c3) or (a1 == b2 and a1 == c3) or (c1 == b2 and c1 == a3)
     get_coin = use_coin * 2
     get_point = use_coin * 2
     puts "おめでとう！すうじがそろいました！"
